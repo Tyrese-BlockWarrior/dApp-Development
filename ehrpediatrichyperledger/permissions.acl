@@ -12,6 +12,24 @@
  * limitations under the License.
  */
 
+/*
+ACL Tutorial: https://ibm-blockchain.github.io/develop/reference/acl_language 
+*/
+
+rule Patient {
+    description: "Allow all participants access to all resources"
+    participant: "composers.participants.Patient"
+    operation: ALL
+    resource: "composers.financial.**"
+    action: DENY
+}
+rule Administrator {
+    description: "Allow all participants access to all resources"
+    participant: "composers.participants.Administrator"
+    operation: ALL
+    resource: "**"
+    action: ALLOW
+}
 rule NetworkAdminUser {
     description: "Grant business network administrators full access to user resources"
     participant: "org.hyperledger.composer.system.NetworkAdmin"
