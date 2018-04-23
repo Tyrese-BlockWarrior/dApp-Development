@@ -1,0 +1,18 @@
+namespace composers.logistics
+import composers.participants.Patient
+
+asset Appointment identified by id{
+	o String id
+	o DateTime time
+	o DateTime realTime
+}
+
+concept Resources{
+	
+}
+
+transaction addAppointment{
+	o DateTime time 
+	o DateTime realTime
+	--> Patient patient
+}
