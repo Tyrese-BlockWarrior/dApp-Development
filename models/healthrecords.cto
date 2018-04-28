@@ -3,8 +3,8 @@
  */
 
 namespace composers.healthrecords
-import composers.participants.Patient
-
+import composers.participants.*
+  
 enum Gender {
   o MALE
   o FEMALE
@@ -58,17 +58,60 @@ concept Visits {
   o String[] medicinePrescribed optional
 }
 
-transaction updateMedication {
+abstract concept immunization {
+	o String name
+	o String provider
+	o String imdate
+}
+
+concept immunirecord extends immunization {}
+
+transaction updateMedication{
   o String[] medicationArray
   o PatientInfo patientInfo
 }
 
-transaction updatePastVisits {
+transaction updatePastVisits{
   o Visits newVisit
   o PatientInfo patientInfo
 }
 
-transaction updateContact {
+transaction updateContact{
   o ContactDetails contactDetails
   o PatientInfo patientInfo
+}
+
+transaction assignMedProvider{
+	--> Guardian guardian
+	--> Doctor doctor
+	--> Childform childform
+}
+
+transaction authMember{
+	--> Guardian guardian
+	--> Member member
+	--> Childform childform
+}
+
+transaction removeMemberAuth {
+	--> Guardian guardian
+	--> Member member
+	--> Childform childform
+}
+
+transaction addImmunizations {
+	o immunirecord [] vaccines
+	--> Childform childform
+}
+
+transaction updateChildForm {
+	o String name optional
+	o String address optional
+	--> Childform childform
+}
+
+transaction reassignGuardian {
+  	--> Guardian oldguardian
+    --> Guardian newguardian
+	--> Childform childform
 }

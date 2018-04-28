@@ -1,0 +1,45 @@
+namespace composers.participants
+import composers.healthrecords.immunirecord
+
+
+abstract participant Person identified by ID{
+  o String firstname
+  o String lastname
+  o String title
+  o String ID
+}
+
+participant Patient extends Person{
+  o DateTime lastvisit
+  o Double balanceDue
+}
+
+participant Guardian extends Person{}
+
+participant Member identified by memid {
+	o String memid
+	o String name
+}
+
+asset Childform identified by cid{
+  o String cid
+	o String name
+	o String address
+	--> Guardian guardian
+	o String dob
+    o DateTime lastvisit
+  	o Double balanceDue
+	--> Doctor [] doctors optional
+	o  immunirecord [] immunizations optional
+}
+
+participant Doctor extends Person{
+  o String department
+  o String salary
+}
+
+
+
+// usually just looks at stuff, doesn't really do transactions
+participant Administrator extends Person{
+}
