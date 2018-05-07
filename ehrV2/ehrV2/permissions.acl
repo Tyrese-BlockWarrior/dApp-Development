@@ -4,16 +4,16 @@ rule PersonMakeOrder {
     operation: ALL
     resource(o): "org.acme.vehicle_network.Baby"
     transaction(tx): "org.acme.vehicle_network.**"
-    condition: (o.doctor.getIdentifier() == p.getIdentifier())
+    condition: (o.doctorId == p.getIdentifier())
     action: ALLOW
 }
 
 rule PersonMakeOrder2{
-    description: "Allow moms to read babies"
+    description: "Allow Doctors to read babies"
     participant(p): "org.acme.vehicle_network.Mom"
     operation: READ
     resource(o): "org.acme.vehicle_network.Baby"
-    condition: (o.mom.getIdentifier() == p.getIdentifier())
+    condition: (o.momId == p.getIdentifier())
     action: ALLOW
 }
 
@@ -22,7 +22,7 @@ rule PersonMakeOrder3 {
     participant(p): "org.acme.vehicle_network.Doctor"
     operation: ALL
     resource(o): "org.acme.vehicle_network.addImmunizations"
-    condition: (o.baby.doctor.getIdentifier() == p.getIdentifier())
+    condition: (o.baby.doctorId == p.getIdentifier())
     action: ALLOW
 }
 
