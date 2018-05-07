@@ -10,11 +10,17 @@ async function addBaby(newBaby) { // eslint-disable-line no-unused-vars
 
     const baby = factory.newResource(namespace, 'Baby', newBaby.babyId);
     baby.babyId = newBaby.babyId;
+    baby.name = newBaby.name;
+    baby.lastVisit = newBaby.lastVisit;
+    baby.balanceDue = newBaby.balanceDue;
     baby.age = newBaby.age;
     baby.gender = newBaby.gender;
     baby.DoB = newBaby.DoB;
-    baby.mom = factory.newRelationship(namespace, 'Mom', newBaby.mom.getIdentifier());
-
+    baby.momId = newBaby.momId;
+    baby.nextCheckUp = newBaby.nextCheckUp;
+    baby.immunizations = newBaby.immunizations;
+    baby.examinationNote = newBaby.examinationNote;
+    baby.momId = newBaby.momId;
     // save the order
     const assetRegistry = await getAssetRegistry(baby.getFullyQualifiedType());
     await assetRegistry.add(baby);
@@ -93,6 +99,6 @@ async function nextCheckUp(date) { // eslint-disable-line no-unused-vars
     // get vehicle registry
     const vehicleRegistry = await getAssetRegistry(namespace + '.Baby');
     const baby = await vehicleRegistry.get(date.babyId);
-    baby.age = date.date;
+    baby.nextCheckUp = date.date;
     await vehicleRegistry.update(baby);
 }
