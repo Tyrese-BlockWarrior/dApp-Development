@@ -1,15 +1,5 @@
 namespace org.acme.vehicle_network
 // ENUM & CONCEPTS
-concept Detail {
-  o String age
-  o String gender
-  o String dob
-}
-
-concept immunRecords {
-  o String provider
-  o String immunName
-}
 
 // PARTICIPANTS
 
@@ -30,8 +20,12 @@ asset Baby identified by babyId{
   o String name
   o String lastVisit
   o Double balanceDue
-  o Detail detail
-  o String[] immunizations optional
+  o String age
+  o String gender
+  o String DoB
+  o String nextCheckUp
+  o String[] immunizations 
+  o String[] examinationNote 
   --> Doctor doctor optional
   --> Mom mom
 }
@@ -42,8 +36,11 @@ transaction addBaby {
   o String name
   o String lastVisit
   o Double balanceDue
-  o Detail detail
+  o String age
+  o String gender
+  o String DoB
   o String[] immunzations optional
+  o String[] examinationNote optional
   --> Doctor doctor optional
   --> Mom mom
 }
@@ -52,7 +49,7 @@ transaction UpdateStatus {
   o String babyId
   o String lastVisit
   o Double balanceDue
-  o Detail detail
+  o String age
   --> Doctor doctor optional
 }
 
@@ -60,4 +57,15 @@ transaction addImmunizations {
   o String babyId
   o String vaccines
   -->Baby baby
+}
+
+transaction addExaminationNote {
+  o String babyId
+  o String note
+  -->Baby baby
+}
+
+transaction nextCheckUp {
+  o String babyId
+  o String date
 }
