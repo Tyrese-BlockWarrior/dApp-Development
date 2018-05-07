@@ -26,8 +26,8 @@ asset Baby identified by babyId{
   o String nextCheckUp
   o String[] immunizations 
   o String[] examinationNote 
-  --> Doctor doctor optional
-  --> Mom mom
+  o String doctorId optional
+  o String momId
 }
 
 // TRANSACTIONS
@@ -39,10 +39,11 @@ transaction addBaby {
   o String age
   o String gender
   o String DoB
-  o String[] immunzations optional
-  o String[] examinationNote optional
-  --> Doctor doctor optional
-  --> Mom mom
+  o String nextCheckUp
+  o String[] immunizations 
+  o String[] examinationNote 
+  o String doctorId optional
+  o String momId
 }
 
 transaction UpdateStatus {
@@ -50,19 +51,17 @@ transaction UpdateStatus {
   o String lastVisit
   o Double balanceDue
   o String age
-  --> Doctor doctor optional
+  o String doctorId optional
 }
 
 transaction addImmunizations {
   o String babyId
   o String vaccines
-  -->Baby baby
 }
 
 transaction addExaminationNote {
   o String babyId
   o String note
-  -->Baby baby
 }
 
 transaction nextCheckUp {
