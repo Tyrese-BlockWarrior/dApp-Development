@@ -37,11 +37,47 @@ export class addBabyComponent implements OnInit {
         
   
       
-          detail = new FormControl("", Validators.required);
+          name = new FormControl("", Validators.required);
         
   
       
-          mom = new FormControl("", Validators.required);
+          lastVisit = new FormControl("", Validators.required);
+        
+  
+      
+          balanceDue = new FormControl("", Validators.required);
+        
+  
+      
+          age = new FormControl("", Validators.required);
+        
+  
+      
+          gender = new FormControl("", Validators.required);
+        
+  
+      
+          DoB = new FormControl("", Validators.required);
+        
+  
+      
+          nextCheckUp = new FormControl("", Validators.required);
+        
+  
+      
+          immunizations = new FormControl("", Validators.required);
+        
+  
+      
+          examinationNote = new FormControl("", Validators.required);
+        
+  
+      
+          doctorId = new FormControl("", Validators.required);
+        
+  
+      
+          momId = new FormControl("", Validators.required);
         
   
       
@@ -62,11 +98,47 @@ export class addBabyComponent implements OnInit {
         
     
         
-          detail:this.detail,
+          name:this.name,
         
     
         
-          mom:this.mom,
+          lastVisit:this.lastVisit,
+        
+    
+        
+          balanceDue:this.balanceDue,
+        
+    
+        
+          age:this.age,
+        
+    
+        
+          gender:this.gender,
+        
+    
+        
+          DoB:this.DoB,
+        
+    
+        
+          nextCheckUp:this.nextCheckUp,
+        
+    
+        
+          immunizations:this.immunizations,
+        
+    
+        
+          examinationNote:this.examinationNote,
+        
+    
+        
+          doctorId:this.doctorId,
+        
+    
+        
+          momId:this.momId,
         
     
         
@@ -142,11 +214,47 @@ export class addBabyComponent implements OnInit {
         
       
         
-          "detail":this.detail.value,
+          "name":this.name.value,
         
       
         
-          "mom":this.mom.value,
+          "lastVisit":this.lastVisit.value,
+        
+      
+        
+          "balanceDue":this.balanceDue.value,
+        
+      
+        
+          "age":this.age.value,
+        
+      
+        
+          "gender":this.gender.value,
+        
+      
+        
+          "DoB":this.DoB.value,
+        
+      
+        
+          "nextCheckUp":this.nextCheckUp.value,
+        
+      
+        
+          "immunizations":this.immunizations.value,
+        
+      
+        
+          "examinationNote":this.examinationNote.value,
+        
+      
+        
+          "doctorId":this.doctorId.value,
+        
+      
+        
+          "momId":this.momId.value,
         
       
         
@@ -166,11 +274,47 @@ export class addBabyComponent implements OnInit {
         
       
         
-          "detail":null,
+          "name":null,
         
       
         
-          "mom":null,
+          "lastVisit":null,
+        
+      
+        
+          "balanceDue":null,
+        
+      
+        
+          "age":null,
+        
+      
+        
+          "gender":null,
+        
+      
+        
+          "DoB":null,
+        
+      
+        
+          "nextCheckUp":null,
+        
+      
+        
+          "immunizations":null,
+        
+      
+        
+          "examinationNote":null,
+        
+      
+        
+          "doctorId":null,
+        
+      
+        
+          "momId":null,
         
       
         
@@ -194,11 +338,47 @@ export class addBabyComponent implements OnInit {
         
       
         
-          "detail":null,
+          "name":null,
         
       
         
-          "mom":null,
+          "lastVisit":null,
+        
+      
+        
+          "balanceDue":null,
+        
+      
+        
+          "age":null,
+        
+      
+        
+          "gender":null,
+        
+      
+        
+          "DoB":null,
+        
+      
+        
+          "nextCheckUp":null,
+        
+      
+        
+          "immunizations":null,
+        
+      
+        
+          "examinationNote":null,
+        
+      
+        
+          "doctorId":null,
+        
+      
+        
+          "momId":null,
         
       
         
@@ -234,13 +414,67 @@ export class addBabyComponent implements OnInit {
     
         
           
-            "detail":this.detail.value,
+            "name":this.name.value,
           
         
     
         
           
-            "mom":this.mom.value,
+            "lastVisit":this.lastVisit.value,
+          
+        
+    
+        
+          
+            "balanceDue":this.balanceDue.value,
+          
+        
+    
+        
+          
+            "age":this.age.value,
+          
+        
+    
+        
+          
+            "gender":this.gender.value,
+          
+        
+    
+        
+          
+            "DoB":this.DoB.value,
+          
+        
+    
+        
+          
+            "nextCheckUp":this.nextCheckUp.value,
+          
+        
+    
+        
+          
+            "immunizations":this.immunizations.value,
+          
+        
+    
+        
+          
+            "examinationNote":this.examinationNote.value,
+          
+        
+    
+        
+          
+            "doctorId":this.doctorId.value,
+          
+        
+    
+        
+          
+            "momId":this.momId.value,
           
         
     
@@ -312,11 +546,47 @@ export class addBabyComponent implements OnInit {
           
         
           
-            "detail":null,
+            "name":null,
           
         
           
-            "mom":null,
+            "lastVisit":null,
+          
+        
+          
+            "balanceDue":null,
+          
+        
+          
+            "age":null,
+          
+        
+          
+            "gender":null,
+          
+        
+          
+            "DoB":null,
+          
+        
+          
+            "nextCheckUp":null,
+          
+        
+          
+            "immunizations":null,
+          
+        
+          
+            "examinationNote":null,
+          
+        
+          
+            "doctorId":null,
+          
+        
+          
+            "momId":null,
           
         
           
@@ -340,20 +610,92 @@ export class addBabyComponent implements OnInit {
           formObject.babyId = null;
         }
       
-        if(result.detail){
+        if(result.name){
           
-            formObject.detail = result.detail;
+            formObject.name = result.name;
           
         }else{
-          formObject.detail = null;
+          formObject.name = null;
         }
       
-        if(result.mom){
+        if(result.lastVisit){
           
-            formObject.mom = result.mom;
+            formObject.lastVisit = result.lastVisit;
           
         }else{
-          formObject.mom = null;
+          formObject.lastVisit = null;
+        }
+      
+        if(result.balanceDue){
+          
+            formObject.balanceDue = result.balanceDue;
+          
+        }else{
+          formObject.balanceDue = null;
+        }
+      
+        if(result.age){
+          
+            formObject.age = result.age;
+          
+        }else{
+          formObject.age = null;
+        }
+      
+        if(result.gender){
+          
+            formObject.gender = result.gender;
+          
+        }else{
+          formObject.gender = null;
+        }
+      
+        if(result.DoB){
+          
+            formObject.DoB = result.DoB;
+          
+        }else{
+          formObject.DoB = null;
+        }
+      
+        if(result.nextCheckUp){
+          
+            formObject.nextCheckUp = result.nextCheckUp;
+          
+        }else{
+          formObject.nextCheckUp = null;
+        }
+      
+        if(result.immunizations){
+          
+            formObject.immunizations = result.immunizations;
+          
+        }else{
+          formObject.immunizations = null;
+        }
+      
+        if(result.examinationNote){
+          
+            formObject.examinationNote = result.examinationNote;
+          
+        }else{
+          formObject.examinationNote = null;
+        }
+      
+        if(result.doctorId){
+          
+            formObject.doctorId = result.doctorId;
+          
+        }else{
+          formObject.doctorId = null;
+        }
+      
+        if(result.momId){
+          
+            formObject.momId = result.momId;
+          
+        }else{
+          formObject.momId = null;
         }
       
         if(result.transactionId){
@@ -398,11 +740,47 @@ export class addBabyComponent implements OnInit {
         
       
         
-          "detail":null,
+          "name":null,
         
       
         
-          "mom":null,
+          "lastVisit":null,
+        
+      
+        
+          "balanceDue":null,
+        
+      
+        
+          "age":null,
+        
+      
+        
+          "gender":null,
+        
+      
+        
+          "DoB":null,
+        
+      
+        
+          "nextCheckUp":null,
+        
+      
+        
+          "immunizations":null,
+        
+      
+        
+          "examinationNote":null,
+        
+      
+        
+          "doctorId":null,
+        
+      
+        
+          "momId":null,
         
       
         

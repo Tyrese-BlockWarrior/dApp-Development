@@ -14,15 +14,15 @@
 
 import { Component, OnInit, Input } from '@angular/core';
 import { FormGroup, FormControl, Validators, FormBuilder } from '@angular/forms';
-import { UpdateStatusService } from './UpdateStatus.service';
+import { nextCheckUpService } from './nextCheckUp.service';
 import 'rxjs/add/operator/toPromise';
 @Component({
-	selector: 'app-UpdateStatus',
-	templateUrl: './UpdateStatus.component.html',
-	styleUrls: ['./UpdateStatus.component.css'],
-  providers: [UpdateStatusService]
+	selector: 'app-nextCheckUp',
+	templateUrl: './nextCheckUp.component.html',
+	styleUrls: ['./nextCheckUp.component.css'],
+  providers: [nextCheckUpService]
 })
-export class UpdateStatusComponent implements OnInit {
+export class nextCheckUpComponent implements OnInit {
 
   myForm: FormGroup;
 
@@ -37,19 +37,7 @@ export class UpdateStatusComponent implements OnInit {
         
   
       
-          lastVisit = new FormControl("", Validators.required);
-        
-  
-      
-          balanceDue = new FormControl("", Validators.required);
-        
-  
-      
-          age = new FormControl("", Validators.required);
-        
-  
-      
-          doctorId = new FormControl("", Validators.required);
+          date = new FormControl("", Validators.required);
         
   
       
@@ -62,7 +50,7 @@ export class UpdateStatusComponent implements OnInit {
   
 
 
-  constructor(private serviceUpdateStatus:UpdateStatusService, fb: FormBuilder) {
+  constructor(private servicenextCheckUp:nextCheckUpService, fb: FormBuilder) {
     this.myForm = fb.group({
     
         
@@ -70,19 +58,7 @@ export class UpdateStatusComponent implements OnInit {
         
     
         
-          lastVisit:this.lastVisit,
-        
-    
-        
-          balanceDue:this.balanceDue,
-        
-    
-        
-          age:this.age,
-        
-    
-        
-          doctorId:this.doctorId,
+          date:this.date,
         
     
         
@@ -102,7 +78,7 @@ export class UpdateStatusComponent implements OnInit {
 
   loadAll(): Promise<any> {
     let tempList = [];
-    return this.serviceUpdateStatus.getAll()
+    return this.servicenextCheckUp.getAll()
     .toPromise()
     .then((result) => {
 			this.errorMessage = null;
@@ -151,26 +127,14 @@ export class UpdateStatusComponent implements OnInit {
 
   addTransaction(form: any): Promise<any> {
     this.Transaction = {
-      $class: "org.acme.vehicle_network.UpdateStatus",
+      $class: "org.acme.vehicle_network.nextCheckUp",
       
         
           "babyId":this.babyId.value,
         
       
         
-          "lastVisit":this.lastVisit.value,
-        
-      
-        
-          "balanceDue":this.balanceDue.value,
-        
-      
-        
-          "age":this.age.value,
-        
-      
-        
-          "doctorId":this.doctorId.value,
+          "date":this.date.value,
         
       
         
@@ -190,19 +154,7 @@ export class UpdateStatusComponent implements OnInit {
         
       
         
-          "lastVisit":null,
-        
-      
-        
-          "balanceDue":null,
-        
-      
-        
-          "age":null,
-        
-      
-        
-          "doctorId":null,
+          "date":null,
         
       
         
@@ -215,7 +167,7 @@ export class UpdateStatusComponent implements OnInit {
       
     });
 
-    return this.serviceUpdateStatus.addTransaction(this.Transaction)
+    return this.servicenextCheckUp.addTransaction(this.Transaction)
     .toPromise()
     .then(() => {
 			this.errorMessage = null;
@@ -226,19 +178,7 @@ export class UpdateStatusComponent implements OnInit {
         
       
         
-          "lastVisit":null,
-        
-      
-        
-          "balanceDue":null,
-        
-      
-        
-          "age":null,
-        
-      
-        
-          "doctorId":null,
+          "date":null,
         
       
         
@@ -264,7 +204,7 @@ export class UpdateStatusComponent implements OnInit {
 
    updateTransaction(form: any): Promise<any> {
     this.Transaction = {
-      $class: "org.acme.vehicle_network.UpdateStatus",
+      $class: "org.acme.vehicle_network.nextCheckUp",
       
         
           
@@ -274,25 +214,7 @@ export class UpdateStatusComponent implements OnInit {
     
         
           
-            "lastVisit":this.lastVisit.value,
-          
-        
-    
-        
-          
-            "balanceDue":this.balanceDue.value,
-          
-        
-    
-        
-          
-            "age":this.age.value,
-          
-        
-    
-        
-          
-            "doctorId":this.doctorId.value,
+            "date":this.date.value,
           
         
     
@@ -308,7 +230,7 @@ export class UpdateStatusComponent implements OnInit {
     
     };
 
-    return this.serviceUpdateStatus.updateTransaction(form.get("transactionId").value,this.Transaction)
+    return this.servicenextCheckUp.updateTransaction(form.get("transactionId").value,this.Transaction)
 		.toPromise()
 		.then(() => {
 			this.errorMessage = null;
@@ -329,7 +251,7 @@ export class UpdateStatusComponent implements OnInit {
 
   deleteTransaction(): Promise<any> {
 
-    return this.serviceUpdateStatus.deleteTransaction(this.currentId)
+    return this.servicenextCheckUp.deleteTransaction(this.currentId)
 		.toPromise()
 		.then(() => {
 			this.errorMessage = null;
@@ -353,7 +275,7 @@ export class UpdateStatusComponent implements OnInit {
 
   getForm(id: any): Promise<any>{
 
-    return this.serviceUpdateStatus.getTransaction(id)
+    return this.servicenextCheckUp.getTransaction(id)
     .toPromise()
     .then((result) => {
 			this.errorMessage = null;
@@ -364,19 +286,7 @@ export class UpdateStatusComponent implements OnInit {
           
         
           
-            "lastVisit":null,
-          
-        
-          
-            "balanceDue":null,
-          
-        
-          
-            "age":null,
-          
-        
-          
-            "doctorId":null,
+            "date":null,
           
         
           
@@ -400,36 +310,12 @@ export class UpdateStatusComponent implements OnInit {
           formObject.babyId = null;
         }
       
-        if(result.lastVisit){
+        if(result.date){
           
-            formObject.lastVisit = result.lastVisit;
-          
-        }else{
-          formObject.lastVisit = null;
-        }
-      
-        if(result.balanceDue){
-          
-            formObject.balanceDue = result.balanceDue;
+            formObject.date = result.date;
           
         }else{
-          formObject.balanceDue = null;
-        }
-      
-        if(result.age){
-          
-            formObject.age = result.age;
-          
-        }else{
-          formObject.age = null;
-        }
-      
-        if(result.doctorId){
-          
-            formObject.doctorId = result.doctorId;
-          
-        }else{
-          formObject.doctorId = null;
+          formObject.date = null;
         }
       
         if(result.transactionId){
@@ -474,19 +360,7 @@ export class UpdateStatusComponent implements OnInit {
         
       
         
-          "lastVisit":null,
-        
-      
-        
-          "balanceDue":null,
-        
-      
-        
-          "age":null,
-        
-      
-        
-          "doctorId":null,
+          "date":null,
         
       
         

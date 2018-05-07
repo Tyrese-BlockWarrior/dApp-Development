@@ -25,7 +25,10 @@ import { BabyComponent } from './Baby/Baby.component';
 
 
   import { addBabyComponent } from './addBaby/addBaby.component';
-  import { UpdateStatusComponent } from './UpdateStatus/UpdateStatus.component';  
+  import { UpdateStatusComponent } from './UpdateStatus/UpdateStatus.component';
+  import { addImmunizationsComponent } from './addImmunizations/addImmunizations.component';
+  import { addExaminationNoteComponent } from './addExaminationNote/addExaminationNote.component';
+  import { nextCheckUpComponent } from './nextCheckUp/nextCheckUp.component';  
 const routes: Routes = [
      //{ path: 'transaction', component: TransactionComponent },
     {path: '', component: HomeComponent},
@@ -41,6 +44,12 @@ const routes: Routes = [
         { path: 'addBaby', component: addBabyComponent},
         
         { path: 'UpdateStatus', component: UpdateStatusComponent},
+        
+        { path: 'addImmunizations', component: addImmunizationsComponent},
+        
+        { path: 'addExaminationNote', component: addExaminationNoteComponent},
+        
+        { path: 'nextCheckUp', component: nextCheckUpComponent},
         
 		{path: '**', redirectTo:''}
 

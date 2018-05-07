@@ -3,10 +3,6 @@ import {Participant} from './org.hyperledger.composer.system';
 import {Transaction} from './org.hyperledger.composer.system';
 import {Event} from './org.hyperledger.composer.system';
 // export namespace org.acme.vehicle_network{
-   export class Detail {
-      age: string;
-      gender: string;
-   }
    export abstract class Person extends Participant {
       username: string;
    }
@@ -16,17 +12,49 @@ import {Event} from './org.hyperledger.composer.system';
    }
    export class Baby extends Asset {
       babyId: string;
-      detail: Detail;
-      mom: Mom;
+      name: string;
+      lastVisit: string;
+      balanceDue: number;
+      age: string;
+      gender: string;
+      DoB: string;
+      nextCheckUp: string;
+      immunizations: string[];
+      examinationNote: string[];
+      doctorId: string;
+      momId: string;
    }
    export class addBaby extends Transaction {
       babyId: string;
-      detail: Detail;
-      mom: Mom;
+      name: string;
+      lastVisit: string;
+      balanceDue: number;
+      age: string;
+      gender: string;
+      DoB: string;
+      nextCheckUp: string;
+      immunizations: string[];
+      examinationNote: string[];
+      doctorId: string;
+      momId: string;
    }
    export class UpdateStatus extends Transaction {
       babyId: string;
-      detail: Detail;
-      status: string;
+      lastVisit: string;
+      balanceDue: number;
+      age: string;
+      doctorId: string;
+   }
+   export class addImmunizations extends Transaction {
+      babyId: string;
+      vaccines: string;
+   }
+   export class addExaminationNote extends Transaction {
+      babyId: string;
+      note: string;
+   }
+   export class nextCheckUp extends Transaction {
+      babyId: string;
+      date: string;
    }
 // }

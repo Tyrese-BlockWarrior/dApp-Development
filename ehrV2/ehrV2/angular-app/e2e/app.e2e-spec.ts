@@ -31,13 +31,13 @@ describe('Starting tests for angular-app', function() {
     })
   });
 
-  it('network-name should be ehr@0.0.1',() => {
+  it('network-name should be ehr@0.0.4',() => {
     element(by.css('.network-name')).getWebElement()
     .then((webElement) => {
       return webElement.getText();
     })
     .then((txt) => {
-      expect(txt).toBe('ehr@0.0.1.bna');
+      expect(txt).toBe('ehr@0.0.4.bna');
     });
   });
 
@@ -63,10 +63,10 @@ describe('Starting tests for angular-app', function() {
       });
     });
 
-    it('Baby table should have 4 columns',() => {
+    it('Baby table should have 13 columns',() => {
       page.navigateTo('/Baby');
       element.all(by.css('.thead-cols th')).then(function(arr) {
-        expect(arr.length).toEqual(4); // Addition of 1 for 'Action' column
+        expect(arr.length).toEqual(13); // Addition of 1 for 'Action' column
       });
     });
   
@@ -129,6 +129,39 @@ describe('Starting tests for angular-app', function() {
       })
       .then((txt) => {
         expect(txt).toBe('UpdateStatus');
+      });
+    });
+  
+    it('addImmunizations component should be loadable',() => {
+      page.navigateTo('/addImmunizations');
+      browser.findElement(by.id('transactionName'))
+      .then((transactionName) => {
+        return transactionName.getText();
+      })
+      .then((txt) => {
+        expect(txt).toBe('addImmunizations');
+      });
+    });
+  
+    it('addExaminationNote component should be loadable',() => {
+      page.navigateTo('/addExaminationNote');
+      browser.findElement(by.id('transactionName'))
+      .then((transactionName) => {
+        return transactionName.getText();
+      })
+      .then((txt) => {
+        expect(txt).toBe('addExaminationNote');
+      });
+    });
+  
+    it('nextCheckUp component should be loadable',() => {
+      page.navigateTo('/nextCheckUp');
+      browser.findElement(by.id('transactionName'))
+      .then((transactionName) => {
+        return transactionName.getText();
+      })
+      .then((txt) => {
+        expect(txt).toBe('nextCheckUp');
       });
     });
   

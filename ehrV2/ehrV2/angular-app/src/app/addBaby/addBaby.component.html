@@ -37,9 +37,9 @@
 
             
               <div class="form-group text-left">
-                <label for="detail">detail</label>
+                <label for="name">name</label>
                 
-                    <textarea formControlName="detail" class="form-control" rows="3"></textarea>
+                  <input formControlName="name" type="text" class="form-control">
                 
               </div>
             
@@ -47,9 +47,99 @@
 
             
               <div class="form-group text-left">
-                <label for="mom">mom</label>
+                <label for="lastVisit">lastVisit</label>
                 
-                    <textarea formControlName="mom" class="form-control" rows="3"></textarea>
+                  <input formControlName="lastVisit" type="text" class="form-control">
+                
+              </div>
+            
+          
+
+            
+              <div class="form-group text-left">
+                <label for="balanceDue">balanceDue</label>
+                
+                  <input formControlName="balanceDue" type="number" step='any' class="form-control">
+                
+              </div>
+            
+          
+
+            
+              <div class="form-group text-left">
+                <label for="age">age</label>
+                
+                  <input formControlName="age" type="text" class="form-control">
+                
+              </div>
+            
+          
+
+            
+              <div class="form-group text-left">
+                <label for="gender">gender</label>
+                
+                  <input formControlName="gender" type="text" class="form-control">
+                
+              </div>
+            
+          
+
+            
+              <div class="form-group text-left">
+                <label for="DoB">DoB</label>
+                
+                  <input formControlName="DoB" type="text" class="form-control">
+                
+              </div>
+            
+          
+
+            
+              <div class="form-group text-left">
+                <label for="nextCheckUp">nextCheckUp</label>
+                
+                  <input formControlName="nextCheckUp" type="text" class="form-control">
+                
+              </div>
+            
+          
+
+            
+              <div class="form-group text-left">
+                <label for="immunizations">immunizations</label>
+                
+                  <input formControlName="immunizations" type="text" class="form-control">
+                
+              </div>
+            
+          
+
+            
+              <div class="form-group text-left">
+                <label for="examinationNote">examinationNote</label>
+                
+                  <input formControlName="examinationNote" type="text" class="form-control">
+                
+              </div>
+            
+          
+
+            
+              <div class="form-group text-left">
+                <label for="doctorId">doctorId</label>
+                
+                  <input formControlName="doctorId" type="text" class="form-control">
+                
+              </div>
+            
+          
+
+            
+              <div class="form-group text-left">
+                <label for="momId">momId</label>
+                
+                  <input formControlName="momId" type="text" class="form-control">
                 
               </div>
             
@@ -111,23 +201,100 @@
             </div>
           
             <div class="form-group text-left">
-              <label for="detail">detail</label>
+              <label for="name">name</label>
 
               
-                
-                  <textarea [ngModel]="detail" formControlName="detail" class="form-control" rows="3"></textarea>
-                
+                <input [ngModel]="name"formControlName="name" type="text" class="form-control">
               
 
             </div>
           
             <div class="form-group text-left">
-              <label for="mom">mom</label>
+              <label for="lastVisit">lastVisit</label>
 
               
-                
-                  <textarea [ngModel]="mom" formControlName="mom" class="form-control" rows="3"></textarea>
-                
+                <input [ngModel]="lastVisit"formControlName="lastVisit" type="text" class="form-control">
+              
+
+            </div>
+          
+            <div class="form-group text-left">
+              <label for="balanceDue">balanceDue</label>
+
+              
+                <input [ngModel]="balanceDue" formControlName="balanceDue" type="number" step='any' class="form-control">
+              
+
+            </div>
+          
+            <div class="form-group text-left">
+              <label for="age">age</label>
+
+              
+                <input [ngModel]="age"formControlName="age" type="text" class="form-control">
+              
+
+            </div>
+          
+            <div class="form-group text-left">
+              <label for="gender">gender</label>
+
+              
+                <input [ngModel]="gender"formControlName="gender" type="text" class="form-control">
+              
+
+            </div>
+          
+            <div class="form-group text-left">
+              <label for="DoB">DoB</label>
+
+              
+                <input [ngModel]="DoB"formControlName="DoB" type="text" class="form-control">
+              
+
+            </div>
+          
+            <div class="form-group text-left">
+              <label for="nextCheckUp">nextCheckUp</label>
+
+              
+                <input [ngModel]="nextCheckUp"formControlName="nextCheckUp" type="text" class="form-control">
+              
+
+            </div>
+          
+            <div class="form-group text-left">
+              <label for="immunizations">immunizations</label>
+
+              
+                <input [ngModel]="immunizations"formControlName="immunizations" type="text" class="form-control">
+              
+
+            </div>
+          
+            <div class="form-group text-left">
+              <label for="examinationNote">examinationNote</label>
+
+              
+                <input [ngModel]="examinationNote"formControlName="examinationNote" type="text" class="form-control">
+              
+
+            </div>
+          
+            <div class="form-group text-left">
+              <label for="doctorId">doctorId</label>
+
+              
+                <input [ngModel]="doctorId"formControlName="doctorId" type="text" class="form-control">
+              
+
+            </div>
+          
+            <div class="form-group text-left">
+              <label for="momId">momId</label>
+
+              
+                <input [ngModel]="momId"formControlName="momId" type="text" class="form-control">
               
 
             </div>
@@ -204,6 +371,15 @@
         <h1 class="transaction-title" id='transactionName'>addBaby</h1>
     </div>
     <div class="col-md-3">
+    <button (click)="resetForm()" type="button" class="btn btn-primary" data-toggle="modal" data-target="#addTransactionModal">
+          <span style="font-size: 14px;font-family: inherit;border-right:1px solid rgba(255,255,255,0.5);padding-right:0.6em;margin-right:0.5em;vertical-align:middle;">
+              <svg class="plus-svg" xmlns="http://www.w3.org/2000/svg" width="10" height="10" viewBox="0 0 10 10">
+                <path fill-rule="evenodd" d="M5.5,4.5 L9.5,4.5 L10,4.5 L10,5.5 L9.5,5.5 L5.5,5.5 L5.5,9.5 L5.5,10 L4.5,10 L4.5,9.5 L4.5,5.5 L0.5,5.5 L0,5.5 L0,4.5 L0.5,4.5 L4.5,4.5 L4.5,0.5 L4.5,0 L5.5,0 L5.5,0.5 L5.5,4.5 Z"/>
+              </svg>
+          </span>
+        Create Transaction
+      </button>
+
     </div>
   </div>
   <br>
@@ -217,9 +393,27 @@
             
               <li><span class="attribute"><b>babyId</b></span></li>
             
-              <li><span class="attribute"><b>detail</b></span></li>
+              <li><span class="attribute"><b>name</b></span></li>
             
-              <li><span class="attribute"><b>mom</b></span></li>
+              <li><span class="attribute"><b>lastVisit</b></span></li>
+            
+              <li><span class="attribute"><b>balanceDue</b></span></li>
+            
+              <li><span class="attribute"><b>age</b></span></li>
+            
+              <li><span class="attribute"><b>gender</b></span></li>
+            
+              <li><span class="attribute"><b>DoB</b></span></li>
+            
+              <li><span class="attribute"><b>nextCheckUp</b></span></li>
+            
+              <li><span class="attribute"><b>immunizations</b></span></li>
+            
+              <li><span class="attribute"><b>examinationNote</b></span></li>
+            
+              <li><span class="attribute"><b>doctorId</b></span></li>
+            
+              <li><span class="attribute"><b>momId</b></span></li>
             
               <li><span class="attribute"><b>transactionId</b></span></li>
             

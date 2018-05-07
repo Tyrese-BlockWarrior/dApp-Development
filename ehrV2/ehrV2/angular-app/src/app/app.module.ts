@@ -31,6 +31,9 @@ import { BabyComponent } from './Baby/Baby.component';
 
   import { addBabyComponent } from './addBaby/addBaby.component';
   import { UpdateStatusComponent } from './UpdateStatus/UpdateStatus.component';
+  import { addImmunizationsComponent } from './addImmunizations/addImmunizations.component';
+  import { addExaminationNoteComponent } from './addExaminationNote/addExaminationNote.component';
+  import { nextCheckUpComponent } from './nextCheckUp/nextCheckUp.component';
 @NgModule({
   declarations: [
     AppComponent,
@@ -46,8 +49,11 @@ import { BabyComponent } from './Baby/Baby.component';
       ,
 
     addBabyComponent,
+        UpdateStatusComponent,
+        addImmunizationsComponent,
+        addExaminationNoteComponent,
         
-        UpdateStatusComponent
+        nextCheckUpComponent
         
   ],
   imports: [

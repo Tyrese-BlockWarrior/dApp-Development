@@ -37,9 +37,9 @@
 
             
               <div class="form-group text-left">
-                <label for="detail">detail</label>
+                <label for="name">name</label>
                 
-                    <textarea formControlName="detail" class="form-control" rows="3"></textarea>
+                  <input formControlName="name" type="text" class="form-control">
                 
               </div>
             
@@ -47,9 +47,99 @@
 
             
               <div class="form-group text-left">
-                <label for="mom">mom</label>
+                <label for="lastVisit">lastVisit</label>
                 
-                    <textarea formControlName="mom" class="form-control" rows="3"></textarea>
+                  <input formControlName="lastVisit" type="text" class="form-control">
+                
+              </div>
+            
+          
+
+            
+              <div class="form-group text-left">
+                <label for="balanceDue">balanceDue</label>
+                
+                  <input formControlName="balanceDue" type="number" step='any' class="form-control">
+                
+              </div>
+            
+          
+
+            
+              <div class="form-group text-left">
+                <label for="age">age</label>
+                
+                  <input formControlName="age" type="text" class="form-control">
+                
+              </div>
+            
+          
+
+            
+              <div class="form-group text-left">
+                <label for="gender">gender</label>
+                
+                  <input formControlName="gender" type="text" class="form-control">
+                
+              </div>
+            
+          
+
+            
+              <div class="form-group text-left">
+                <label for="DoB">DoB</label>
+                
+                  <input formControlName="DoB" type="text" class="form-control">
+                
+              </div>
+            
+          
+
+            
+              <div class="form-group text-left">
+                <label for="nextCheckUp">nextCheckUp</label>
+                
+                  <input formControlName="nextCheckUp" type="text" class="form-control">
+                
+              </div>
+            
+          
+
+            
+              <div class="form-group text-left">
+                <label for="immunizations">immunizations</label>
+                
+                  <input formControlName="immunizations" type="text" class="form-control">
+                
+              </div>
+            
+          
+
+            
+              <div class="form-group text-left">
+                <label for="examinationNote">examinationNote</label>
+                
+                  <input formControlName="examinationNote" type="text" class="form-control">
+                
+              </div>
+            
+          
+
+            
+              <div class="form-group text-left">
+                <label for="doctorId">doctorId</label>
+                
+                  <input formControlName="doctorId" type="text" class="form-control">
+                
+              </div>
+            
+          
+
+            
+              <div class="form-group text-left">
+                <label for="momId">momId</label>
+                
+                  <input formControlName="momId" type="text" class="form-control">
                 
               </div>
             
@@ -91,23 +181,100 @@
             </div>
           
             <div class="form-group text-left">
-              <label for="detail">detail</label>
+              <label for="name">name</label>
               
               
-                
-                  <textarea [ngModel]="detail" formControlName="detail" class="form-control" rows="3"></textarea>
-                
+                <input [ngModel]="name"formControlName="name" type="text" class="form-control">
               
 
             </div>
           
             <div class="form-group text-left">
-              <label for="mom">mom</label>
+              <label for="lastVisit">lastVisit</label>
               
               
-                
-                  <textarea [ngModel]="mom" formControlName="mom" class="form-control" rows="3"></textarea>
-                
+                <input [ngModel]="lastVisit"formControlName="lastVisit" type="text" class="form-control">
+              
+
+            </div>
+          
+            <div class="form-group text-left">
+              <label for="balanceDue">balanceDue</label>
+              
+              
+                <input [ngModel]="balanceDue" formControlName="balanceDue" type="number" step='any' class="form-control">
+              
+
+            </div>
+          
+            <div class="form-group text-left">
+              <label for="age">age</label>
+              
+              
+                <input [ngModel]="age"formControlName="age" type="text" class="form-control">
+              
+
+            </div>
+          
+            <div class="form-group text-left">
+              <label for="gender">gender</label>
+              
+              
+                <input [ngModel]="gender"formControlName="gender" type="text" class="form-control">
+              
+
+            </div>
+          
+            <div class="form-group text-left">
+              <label for="DoB">DoB</label>
+              
+              
+                <input [ngModel]="DoB"formControlName="DoB" type="text" class="form-control">
+              
+
+            </div>
+          
+            <div class="form-group text-left">
+              <label for="nextCheckUp">nextCheckUp</label>
+              
+              
+                <input [ngModel]="nextCheckUp"formControlName="nextCheckUp" type="text" class="form-control">
+              
+
+            </div>
+          
+            <div class="form-group text-left">
+              <label for="immunizations">immunizations</label>
+              
+              
+                <input [ngModel]="immunizations"formControlName="immunizations" type="text" class="form-control">
+              
+
+            </div>
+          
+            <div class="form-group text-left">
+              <label for="examinationNote">examinationNote</label>
+              
+              
+                <input [ngModel]="examinationNote"formControlName="examinationNote" type="text" class="form-control">
+              
+
+            </div>
+          
+            <div class="form-group text-left">
+              <label for="doctorId">doctorId</label>
+              
+              
+                <input [ngModel]="doctorId"formControlName="doctorId" type="text" class="form-control">
+              
+
+            </div>
+          
+            <div class="form-group text-left">
+              <label for="momId">momId</label>
+              
+              
+                <input [ngModel]="momId"formControlName="momId" type="text" class="form-control">
               
 
             </div>
@@ -185,9 +352,27 @@
             
                 <th class="info">babyId</th>
             
-                <th class="info">detail</th>
+                <th class="info">name</th>
             
-                <th class="info">mom</th>
+                <th class="info">lastVisit</th>
+            
+                <th class="info">balanceDue</th>
+            
+                <th class="info">age</th>
+            
+                <th class="info">gender</th>
+            
+                <th class="info">DoB</th>
+            
+                <th class="info">nextCheckUp</th>
+            
+                <th class="info">immunizations</th>
+            
+                <th class="info">examinationNote</th>
+            
+                <th class="info">doctorId</th>
+            
+                <th class="info">momId</th>
             
               <th class="info-actions">Actions</th>
           </tr>
@@ -198,9 +383,27 @@
             
                 <td class="asset-properties">{{asset.babyId}}</td>
             
-                <td class="asset-properties">{{asset.detail}}</td>
+                <td class="asset-properties">{{asset.name}}</td>
             
-                <td class="asset-properties">{{asset.mom}}</td>
+                <td class="asset-properties">{{asset.lastVisit}}</td>
+            
+                <td class="asset-properties">{{asset.balanceDue}}</td>
+            
+                <td class="asset-properties">{{asset.age}}</td>
+            
+                <td class="asset-properties">{{asset.gender}}</td>
+            
+                <td class="asset-properties">{{asset.DoB}}</td>
+            
+                <td class="asset-properties">{{asset.nextCheckUp}}</td>
+            
+                <td class="asset-properties">{{asset.immunizations}}</td>
+            
+                <td class="asset-properties">{{asset.examinationNote}}</td>
+            
+                <td class="asset-properties">{{asset.doctorId}}</td>
+            
+                <td class="asset-properties">{{asset.momId}}</td>
             
             <td>
               <button (click)="getForm(asset.babyId);" type="button" class="btn btn-update" data-toggle="modal" data-target="#updateAssetModal">
