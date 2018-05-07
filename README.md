@@ -12,6 +12,8 @@ Move to ehr_0.0.4 directory and run the command
 composer-rest-server -c admin@ehr
 ```
 This will allow REST API to run on port :3000. 
+![Alt text](3000.jpg?raw=true "Title")
+
 
 To access the angular front-end, move to ./angular-app directory and run
 ```
