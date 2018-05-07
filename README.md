@@ -40,4 +40,4 @@ No tests are present at the moment.
 ## Authors
 
 * **Min Joon So** - *Initial work* - [mjso7660](https://github.com/mjso7660)
-* **Shailesh Patro""
+* **Shailesh Patro**
