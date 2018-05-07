@@ -8,7 +8,16 @@ rule PersonMakeOrder {
     action: ALLOW
 }
 
-rule PersonMakeOrder2 {
+rule PersonMakeOrder2{
+    description: "Allow moms to read babies"
+    participant(p): "org.acme.vehicle_network.Mom"
+    operation: READ
+    resource(o): "org.acme.vehicle_network.Baby"
+    condition: (o.mom.getIdentifier() == p.getIdentifier())
+    action: ALLOW
+}
+
+rule PersonMakeOrder3 {
     description: "Allow Doctors to create, read, delete transactions"
     participant(p): "org.acme.vehicle_network.Doctor"
     operation: ALL
