@@ -19,6 +19,7 @@ To access the angular front-end, move to ./angular-app directory and run
 ```
 npm start
 ```
+![Alt text](4200.jpg?raw=true "Title")
 ### Prerequisites
 
 NPM --v 5.X.X
