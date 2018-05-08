@@ -4,7 +4,7 @@ A web app to replace the current EHR (electronic Healthcare Records) system usin
 ## Getting Started
 Clone the repo using 
 ```
-git clone $repoAddress
+git clone https://github.com/mjso7660/PH360_project.git
 ```
 
 Move to ehr_0.0.4 directory and run the command
